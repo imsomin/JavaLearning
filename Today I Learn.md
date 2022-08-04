@@ -1,21 +1,19 @@
 <0804>
 
-1.사용한 웹 컨테이너 : 톰캣8.5
+1. 사용한 웹 컨테이너 : 톰캣8.5
   클라이언트의 요청에 따른 리소스를 찾고 
   자바 코드를 html 코드로 변환하여 응답 및 전송해주는 임무 수행
 
-2.통합 개발 환경(IDE), 코드를 작성하고 빌드해줄 수 있는 툴 : 이클립스
 
-3.Servelt : 자바 코드에 html 삽입
-  용도 : 처리
+2. 통합 개발 환경(IDE), 코드를 작성하고 빌드해줄 수 있는 툴 : 이클립스
 
- vs 
 
- JSP : html 내에 자바 코드 삽입
- 용도 : 출력
+3. Servelt : 자바 코드에 html 삽입(용도 : 처리)
+    JSP : html 내에 자바 코드 삽입(용도 : 출력)
  
-=> 서블릿은 최초 한 번만 실행시키면 클래스 파일이 이미 존재하는 상황이 되지만
-jsp 는 호출할 때마다 클래스를 만들고 객체를 만들고, 이를 반복함
+   => 서블릿은 최초 한 번만 실행시키면 클래스 파일이 이미 존재하는 상황이 되지만
+   jsp 는 호출할 때마다 클래스를 만들고 객체를 만들고, 이를 반복함
+
 
 4. 컴파일: 작성한 소스 코드(.java)는 자바 컴파일러의 컴파일 과정을 통해
    자바가상머신(JVM)이 인식할 수 있는 바이트 코드를 생성해내고
@@ -25,13 +23,16 @@ jsp 는 호출할 때마다 클래스를 만들고 객체를 만들고, 이를 �
    하나의 실행 파일로 만들어 주는 과정이 빌드이다.
    이클립스는 컴파일과 빌드를 한 번에 해주는 것이다.
 
+
 5. .jar
 라이브러리 파일
 자바 패키지의 집합으로 압축된 파일
 이 파일만은 유일하게 자바에서 스스로 압축을 해제하여 사용하게 된다.
 
+
 6. src
 확장자가 .java 인 파일들은 모조리 여기 위치한다.
+
 
 7. WebContent
 - META-INF : 여기에는 context.xml 만 들어간다
@@ -45,12 +46,15 @@ request : 내장 객체
 response : 내장 객체
 session : 내장 객체
 
+
 9. servlet
 request : doGet() 과 doPost()의 매개변수
 response : doGet() 과 doPost()의 매개변수
 session : request.getSession() 으로 만들어서 사용 필요
 
+
 10. servlet을 만들고 request 객체를 공유할 수 있도록 작성하는 방법
+
 Servlet
 {
    HttpServletRequest request;  //멤버 변수로 request 를 구성해두면 된다
@@ -83,16 +87,17 @@ public void doPost(HttpServletRequest request, HttpServletResponse response){
 	response.setContentType("text/html; charset=EUC-KR");
 }
 
+
 12. 데이터 전송 : Servlet -> JSP
 애트리뷰트(attribute)를 이용한다.
 이 과정에서 파라미터는 잘 사용되지 않는다.
 
-처리 과정)
+<처리 과정>
 데이터 전송
 request.setAttribute("속성명", 데이터); 
 session.setAttribute("속성명", 데이터)
 
-처리
+<처리>
 (변경할 타입명)request.getAttribute("속성명");
 (변경할 타입명)session.getAttribute("속성명");
 
@@ -135,10 +140,12 @@ session.setAttribute("속성명", 데이터)
 요청    ->->-> Controller ->->-> Service ->->-> Dao
 응답  <-<- JSP <-<- Controller <-<- Service <-<- 처리결과
 
+
 14.
 Listener : 프로젝트의 시작과 종료(서버 올릴 때 처음 실행되고 종료되는 것)
 Filter : 특정 요청에 따른 걸러내기(필터링)
 Wrapper : 데이터 변경
+
 
 15. 한글처리
 -주소에 한글이 존재하는 경우
