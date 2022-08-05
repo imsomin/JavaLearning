@@ -117,6 +117,12 @@ session.setAttribute("속성명", 데이터)
 
 
 
+
+
+
+
+
+
 <0805>
 
 1.JAVA의 특징  
