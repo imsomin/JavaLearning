@@ -1,29 +1,47 @@
 package Base;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class day02_1 {
 	
 	public static void main(String[] args) throws IOException
 	{
+		//인스턴스 생성
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		//변수 선언
-		char ch, result;
+		int year;  //-- 입력한 연도
+		String result; //-- 판별 결과
 		
-		System.out.print("한 문자 입력 : ");
-		ch = (char)System.in.read();
+		//연산 처리
+		System.out.print("임의의 연도 입력 : ");
+		year = Integer.parseInt(br.readLine()); //문자열은 바로 담을 수 없으므로 integer 처리 필요
+
+		//윤년 or 평년 구하기
+		result = year%4==0 && year%100!=0 || year%400==0 ? "윤년" : "평년";
 		
-		result = (ch>='A' && ch<='Z') ? (char)(ch+32) : (ch>='a' && ch<='z') ? (char)(ch-32) : ch;
+		//결과
+		System.out.printf("%d년 -> %s%n", year, result);
 		
-		System.out.print(ch + "->" + result);
+		
 		
 		
 		
 		
 	}
-	
-	
 
 }
 
-// h -> H
-// D -> d
+
+/*
+임의의 연도 입력 : 2022
+2022년 -> 평년
+
+임의의 연도 입력 : 2000
+2000년 -> 윤년
+*/
+
+
+
