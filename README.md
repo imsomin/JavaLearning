@@ -7,3 +7,4 @@
 - day03 : IF문 처리
 - day04 : Switch문 처리
 - day05 : While 반복문 연산
+- day06 : do-while 반복문 연산
