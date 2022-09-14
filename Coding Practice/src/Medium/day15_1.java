@@ -140,7 +140,7 @@ public class day15_1 {
 	
 	public static void main(String[] args) 
 	{
-		//WeekDay 클래스 기반 인스터스 생성
+		//WeekDay 클래스 기반 인스턴스 생성
 		WeekDay wd = new WeekDay();
 
 		//입력 메소드 호출
