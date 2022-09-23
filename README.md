@@ -27,4 +27,5 @@
 - day21 : 중첩클래스
 - day22 : 주요클래스(object 클래스)
 - day23 : 주요클래스(wrapper 클래스)
+- day24 : 주요클래스(string 클래스)
 
