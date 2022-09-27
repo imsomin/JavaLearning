@@ -30,3 +30,4 @@
 - day24 : 주요클래스(string 클래스)
 - day25 : 주요클래스(calendar 클래스)
 - day26 : 예외처리
+- day27 : 컬렉션 프레임워크(Stack, Queue)
