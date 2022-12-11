@@ -1,5 +1,4 @@
 # JavaLearning
-자바 공부 공간
 
 # Coding Practice
 휘발 방지🎈 기초 코딩 프로세스 기록 일지🔨
@@ -37,4 +36,3 @@
 - day30 : 컬렉션 프레임워크(Set, Map)
 - day31 : 자바 입출력 및 객체 직렬화
 
-# Coding Test
